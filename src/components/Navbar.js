@@ -1,31 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function Navbar(props) {
   return (
     <nav className="navbar navbar-expand navbar-dark  bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           {props.title}
-        </a>
-        <buthrefn
-          className="navbar-hrefggler"
-          type="buthrefn"
-          data-bs-hrefggle="collapse"
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="hrefggle navigation"
+          aria-label="toggle navigation"
         >
-          <span className="navbar-hrefggler-icon"></span>
-        </buthrefn>
+          <span className="navbar-toggler-icon"></span>
+        </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auhref mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-a active" aria-current="page" href="#">
-                Home
-              </a>
-            </li>
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item"> <Link className="nav-Link active" aria-current="page" to="/"> Home </Link> </li>
+            <li className="nav-item mx-2"> <Link className="nav-Link active" aria-current="page" to="/"> About Us </Link> </li>
            
           </ul>
         </div>
