@@ -5,6 +5,7 @@ import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Textform from "./components/Textform";
+// import SetState3 from "./components/SetState3";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
@@ -20,16 +21,16 @@ function App() {
     <>
       <Navbar title="TextEditor" />
       <Alert alert={alert} />
-<Routes>
-  <Route exact path="/" element={
-  <div className="container"> <Textform heading="Enter text to analyze" showAlert={showAlert} />
-      </div>
-  }>
- </Route> 
- <Route exact path="/about" element={<About/>}></Route> 
- </Routes> 
-      
-      
+      <Routes>
+        <Route exact path="/" element={
+          <div className="container"> <Textform heading="Enter text to analyze" showAlert={showAlert} />
+          </div>
+        }>
+        </Route>
+        <Route exact path="/about" element={<About />}></Route>
+      </Routes>
+      {/* <SetState3 /> */}
+
     </>
   );
 }
